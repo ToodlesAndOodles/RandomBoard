@@ -1,0 +1,19 @@
+import random
+rows, cols = (10, 10)
+arr = [[0]*cols]*rows
+x = 0
+for i in range(len(arr)):
+    for j in range(len(arr[i])):
+        arr[i][j] = random.randint(0, 9)
+        
+for i in range(len(arr)):
+    for j in range(len(arr[i])):
+        print(arr[i][j], end=' ')
+    print()
+for i in range(len(arr)):
+    for j in range(len(arr[i])):
+       x += arr[i][j]
+    
+    
+print(x)
+print("THAT WAS X")
