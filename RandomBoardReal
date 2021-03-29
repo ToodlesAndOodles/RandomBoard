@@ -1,19 +1,22 @@
 import random
 rows, cols = (10, 10)
 arr = [[0 for i in range(cols)] for j in range(rows)]
-x = 0
 for i in range(len(arr)):
     for j in range(len(arr[i])):
         arr[i][j] = random.randint(0, 9)
+
+def print_array(arr):
+    for i in range(len(arr)):
+        for j in range(len(arr[i])):
+            print(arr[i][j], end=' ')
+        print()
         
-for i in range(len(arr)):
-    for j in range(len(arr[i])):
-        print(arr[i][j], end=' ')
-    print()
-for i in range(len(arr)):
-    for j in range(len(arr[i])):
-       x += arr[i][j]
+def find_sum(arr):
+    x = 0
+    for i in range(len(arr)):
+        for j in range(len(arr[i])):
+            x += arr[i][j]
+    print(x)
     
-    
-print(x)
-print("THAT WAS X")
+print_array(arr)
+find_sum(arr)
